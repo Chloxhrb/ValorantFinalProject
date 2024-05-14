@@ -1,0 +1,1413 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Rationale&family=Teko:wght@300..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  cursor: crosshair;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(224, 223, 223);
+}
+h5 {
+  font-family: "Quantico";
+  font-size: 18px;
+}
+/*iconVolume*/
+.VolumeIcon {
+  background-color: rgb(4, 4, 4) ;
+  color: #ff4454e6;
+  padding: 5px;
+  
+}
+.VolumeButton {
+  border: none;
+  height: 20px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+/* les header */
+
+.HeadersansConnexion {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 80px 0px 80px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15%;
+  justify-content: space-between;
+  padding: 30px 80px 0px 80px;
+}
+.logo {
+  height: 50px;
+}
+.headerPart {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.linkHeader {
+  text-decoration: none;
+  color: #ff4454;
+  font-family: "Teko";
+  font-weight: 300;
+  font-size: 25px;
+}
+.linkHeadersansConnexion {
+  text-decoration: none;
+  color: #ff4454;
+  font-family: "Teko";
+  font-weight: 300;
+  font-size: 35px;
+}
+.LogoutButton {
+  background-color: #ff4454;
+  width: 40%;
+  border: 2px solid #ff4454;
+  border-radius: 5px;
+  font-family: "Teko";
+  font-size: 20px;
+}
+
+/* PrincipalPage*/
+.AcceuilPage {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.AcceuilPage {
+  position: relative;
+  overflow: hidden;
+}
+
+.AcceuilPage video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1; 
+  filter: blur(3px);
+  opacity: 60%;
+}
+.Logosection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.LogoAccueil{
+  width: 30%;
+  animation: pulse 2.5s infinite alternate;
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Les animations*/
+/* acceuil */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* agentpage auth */
+@keyframes zoom {
+  0% {
+    background-size: 102%;
+  }
+  100% {
+    background-size: 106%;
+  }
+}
+
+/*Authentification */
+
+.AuthSection {
+  background-image: url("../src/assets/images/background/Jettwp.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  animation: zoom 2.5s infinite alternate;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+.FormAuth {
+  background-color: rgba(74, 74, 74, 0.508);
+  border-radius: 10px;
+  width: 30%;
+  margin: 20px 0px 0px 120px;
+  padding: 20px;
+}
+.Inputform {
+  padding: 5px 0px;
+}
+.prompt {
+  background-color: rgba(41, 36, 74, 0);
+  color: white;
+  width: 95%;
+  font-size: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Quantico";
+}
+.ButtonAuth {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  justify-content: flex-end;
+}
+.Submit {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: #ff4454;
+  height: 35px;
+  width: 23%;
+  font-family: "Rationale";
+  font-size: 15px;
+}
+.hidepsw {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 20px;
+  width: 45%;
+  background-color: #8181817c;
+  margin-top: 10px;
+  font-family: "quantico";
+  font-size: 13px;
+}
+.FormSection {
+  display: flex;
+  justify-content: end;
+  padding: 0px 120px 20px 0px;
+}
+.ConnexionInscription {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.Question {
+  font-size: 15px;
+  font-family: "rationale";
+  text-decoration: none;
+  color: whitesmoke;
+}
+.linkAuth {
+  text-decoration: underline;
+  color: #ff4454;
+  font-size: 15px;
+  font-family: "rationale";
+}
+.Linkconnection {
+  color: whitesmoke;
+  font-size: 15px;
+  font-family: "Advent Pro";
+}
+
+/* page Arme */
+.ArmePage {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+.WeaponSection {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px 60px 60px;
+  gap: 30px;
+}
+.Titlediv {
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+  background-color: #2727276f;
+  border-radius: 5px;
+}
+.IntroWeapon {
+  font-family: "kode mono";
+  font-weight: 400;
+  color: #afadad;
+  font-size: 15px;
+}
+.Allweapons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 5px 0px 5px 0px;
+}
+.weaponImage {
+  padding: 30px 50px 10px 50px;
+}
+.weaponpicture {
+  width: 100%;
+  height: 150px;
+}
+.card-weapon {
+  display: flex;
+  flex-direction: column;
+  width: 47%;
+  background-color: #2727276f;
+  border-radius: 5px;
+  box-shadow: 3px 6px 12px #ff445456;
+  transition: box-shadow 0.5s ease-in-out;
+
+  opacity: 50%;
+}
+.card-weapon:hover {
+  box-shadow: 8px 8px 18px #ff4454a5;
+  opacity: 100%;
+}
+.WeaponInfo {
+  padding: 10px 20px 10px 20px;
+}
+
+/* css carte weapon info */
+
+.weaponTitle {
+  font-family: "Kode Mono";
+  font-size: 35px;
+  color: #acacac;
+  text-shadow: 2px 2px 2px #ff44549d;
+}
+.weaponClass {
+  font-family: "lekton";
+  font-size: 17px;
+  color: #dadadaa8;
+  text-shadow: 2px 2px 2px #ff445491;
+}
+.weaponType {
+  font-family: "lekton";
+  font-size: 13px;
+  color: #dadadaa8;
+  text-shadow: 2px 2px 2px #ff445491;
+}
+.weaponCost {
+  font-family: "Kode Mono";
+  font-size: 17px;
+  color: #acacac;
+  text-shadow: 2px 2px 2px #ff445491;
+}
+.weaponDescription {
+  font-family: "lekton";
+  font-size: 13px;
+  color: #dadadaa8;
+  text-align: center;
+}
+
+/*Profil Page User*/
+
+.ProfilPagebcg {
+  background-image: url("../src/assets/images/background/profilbgk.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.UserProfil {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.UserData {
+  color: white;
+}
+
+/*page D'agent*/
+
+.AgentPage {
+  display: flex;
+  flex-direction: column;
+}
+.Agent-profil {
+  display: flex;
+  flex-direction: row;
+}
+.allAgents {
+  display: grid;
+  width: 10%;
+  margin-left: 50px;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ListAgent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.agentprofil {
+  width: 70%;
+  margin: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 3px 6px 12px #ff445456;
+  transition: box-shadow 0.5s ease-in-out;
+}
+.agentprofil:hover {
+  box-shadow: 4px 4px 12px #ff4454a5;
+}
+.AgentPresentation {
+  display: flex;
+  width: 55%;
+  padding: 30px;
+}
+.descriptionContainer {
+  padding: 10px;
+  background-color: #2727276f;
+  border-radius: 5px;
+  box-shadow: 3px 6px 12px #ff445456;
+  margin-bottom: 15px;
+}
+.NomRole {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.AgentName {
+  font-family: "Kode Mono";
+  font-size: 30px;
+  color: #acacac;
+  text-shadow: 2px 2px 2px #ff44549d;
+}
+.AgentRole {
+  font-family: "Kode Mono";
+  font-size: 25px;
+  color: #dadadaa8;
+  text-shadow: 2px 2px 2px #ff445491;
+}
+.Agentdescription {
+  font-family: "lekton";
+  font-size: 13px;
+  color: #dadadaa8;
+  text-shadow: 2px 2px 2px #ff445491;
+  text-align: center;
+}
+.AgentPicture {
+  width: 30%;
+}
+.photoAgent {
+  width: 100%;
+}
+.abilityUlt {
+  display: flex;
+  flex-direction: row;
+  background-color: #2727276f;
+  border-radius: 5px;
+  box-shadow: 3px 6px 12px #ff445456;
+}
+.Ultname {
+  font-family: "kode Mono";
+  font-size: 25px;
+  color: #dadadaa8;
+  text-shadow: 2px 2px 2px #ff445491;
+  text-align: center;
+}
+.abilityContainer {
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.ultcard {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 10px;
+}
+.UltiName {
+  margin-top: 15%;
+}
+.UltiVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.VideoOfUlt {
+  width: 90%;
+}
+.abilityCard {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.AbilityLogo {
+  width: 45%;
+}
+.abilitypicture {
+  display: flex;
+  justify-content: center;
+}
+.abilitydescription {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.abilityName {
+  font-family: "lekton";
+  font-size: 11px;
+  color: #dadadaa8;
+  text-align: center;
+  text-shadow: 2px 2px 2px #ff445491;
+}
+.abilityDescription {
+  font-family: "lekton";
+  font-size: 10px;
+  color: #dadadaa8;
+  text-align: center;
+  text-shadow: 2px 2px 2px #ff445491;
+  text-align: center;
+}
+
+/*Page d'admin*/
+
+.AllCrud {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 60px 60px 0px 60px;
+  justify-content: center;
+}
+.Cardcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 45%;
+}
+.Card-crud {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  background-color: #2b2b2b52;
+  opacity: 40%;
+  box-shadow: 3px 6px 12px #ff445492;
+  border-radius: 5px;
+}
+.Card-crud:hover {
+  opacity: 100%;
+  box-shadow: 3px 6px 12px #ff4454;
+}
+.linkCrud {
+  color: #ff4454;
+  font-family: "Quantico";
+  font-size: 17px;
+  text-decoration: none;
+}
+.CrudLink {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+.ImageCrud {
+  display: flex;
+  justify-content: end;
+}
+.picture-of-crud {
+  width: 60%;
+  border-radius: 5px;
+}
+/* Page all User*/
+
+.AllUserPage {
+  display: flex;
+  flex-direction: row;
+}
+.TableauGrand {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #434242a2;
+  margin: 50px 70px 70px 70px;
+  gap: 7px;
+}
+.Line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #0f0e0e;
+  padding: 3px 10px 3px 10px;
+}
+.Line1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #0f0e0e;
+  padding: 3px 10px 3px 10px;
+}
+.case {
+  width: 25%;
+}
+.case1 {
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  gap: 35%;
+  padding-left: 10px;
+}
+.case2 {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  gap: 50%;
+}
+.Userinfo {
+  font-family: "lekton";
+}
+.Userinfo1 {
+  font-family: "lekton";
+  color: #e1424fd8;
+}
+.ImageCruduser2 {
+  background-image: url("../src/assets/images/crud/userr.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 252px;
+  width: 20%;
+  margin-top: 70px;
+  box-shadow: 6px 3px 8px #ff4454a5;
+}
+.deleteModifierCrud {
+  background-color: #212121;
+  color: #dbdbdb;
+  border: 2px solid #ff4454;
+  font-family: "Quantico";
+  font-size: 10px;
+  width: 40px;
+}
+.buttCrud {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 10%;
+}
+
+/*allweaponPage*/
+
+.card-weaponCrud {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+}
+.card-weapon1 {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  background-color: #1a1919;
+  border-radius: 5px;
+  box-shadow: 3px 6px 12px #ff44549b;
+}
+.WeaponInfo {
+  padding: 10px 20px 10px 20px;
+}
+.suppWeapon {
+  width: 5%;
+}
+.deleteModifierCrud2 {
+  background-color: #46454590;
+  color: #ff44549b;
+  border: 1px solid #ff44549b;
+  font-family: "Quantico";
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+}
+.Allweapons2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 95px;
+  padding: 5px 20px 5px 20px;
+}
+
+/*Page Create Object */
+
+.CreateObject {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 90px 50px 90px;
+}
+.AncreForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
+}
+.DivAncre {
+  width: 15%;
+  border: 3px SOLID #ff4454ca;
+  display: flex;
+  justify-content: center;
+  opacity: 40%;
+}
+.DivAncre:hover {
+  opacity: 100%;
+}
+.Ancre {
+  text-decoration: none;
+  font-family: "Quantico";
+  color: #ff4454b6;
+  font-size: larger;
+}
+.CreateCard {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border: 5px double #ff4454ca;
+  opacity: 30%;
+}
+.CreateCard:hover {
+  opacity: 100%;
+}
+.Object {
+  width: 40%;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ObjectForm {
+  width: 60%;
+  padding: 40px 30px 40px 30px;
+}
+.TitleForm {
+  color: #ff4454ca;
+  font-family: "rationale";
+  font-size: 40px;
+  text-decoration: 2px underline double;
+  text-underline-offset: 7px;
+}
+.formCreate {
+  display: flex;
+  flex-direction: column;
+}
+.Submit2 {
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
+  color: white;
+  background-color: #ff4454ca;
+  height: 35px;
+  width: 23%;
+  font-family: "teko";
+  font-size: 20px;
+}
+.messageCrud {
+  color: #ff4454;
+  font-size: 20px;
+  font-family: "Rationale";
+}
+
+/*Page ALL ABILITY */
+
+.AllAbility {
+  display: flex;
+  flex-direction: Row;
+  flex-wrap: wrap;
+  gap: 50px;
+  border: 2px solid #ff445466;
+  margin: 40px 80px 40px 80px;
+  padding: 35px 30px 35px 75px;
+}
+.AbilityCard {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff4454d6;
+  width: 20%;
+  opacity: 40%;
+}
+.AbilityCard:hover {
+  opacity: 100%;
+}
+.abilityIcon {
+  width: 100%;
+}
+.AbilityInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 170px;
+}
+.AbilityType {
+  font-family: "Quantico";
+  color: #ff4454;
+  font-size: 15px;
+}
+.AbilityName {
+  font-family: "rationale";
+  font-size: 19px;
+  color: #ff44548f;
+}
+.AbilityDescription {
+  font-family: "lekton";
+  text-align: center;
+  font-size: 12px;
+}
+.suppAbility {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/*Page Weapon / abilité /  Update*/
+
+.Updatepage {
+  display: flex;
+  flex-direction: column;
+}
+.divupd {
+  display: flex;
+  padding: 70px 100px 70px 100px;
+  flex-direction: row;
+}
+.UpdateForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px 20px 20px 20px;
+  gap: 10px;
+  border: 1px solid #ff4454ca;
+}
+.OptionCrud {
+  color: #ff4454ca;
+  background-color: #cbcbcbd9;
+}
+.OptionCrud1 {
+  color: #0f0e0e;
+  background-color: #cbcbcbd9;
+}
+.UpCrud {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.upWetitle {
+  font-size: 40px;
+  font-family: "Teko";
+  text-decoration: underline;
+  text-decoration-color: #eb2a3aba;
+  text-decoration-thickness: 3px; /* Épaisseur de l'underline */
+  text-underline-offset: 7px; /* Espace entre le texte et l'underline */
+}
+.imgButt {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 40px;
+  align-items: center;
+  width: 45%;
+}
+.ImgUpdate {
+  width: 100%;
+  box-shadow: 0 0 15px 10px rgba(254, 62, 62, 0.658);
+}
+
+textarea {
+  max-width: 95%;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.linkothercrud {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 30px;
+}
+.linkCrud2 {
+  color: #ff4454;
+  font-family: "Quantico";
+  text-decoration: none;
+  font-size: 30px;
+}
+/*page ALL AGENTS ADMIN */
+
+.agent-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+}
+.agent-card {
+  width: 45%;
+  background-color: #0f0e0e;
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  border: 2px solid #ff4454;
+  opacity: 40%;
+}
+.agent-card:hover {
+  opacity: 100%;
+}
+.Premierepartie {
+  width: 58%;
+  padding-left: 30px;
+}
+.profilphotoAgent {
+  width: 40%;
+}
+.photoEntiereagent {
+  width: 40%;
+  padding-top: 20px;
+}
+.photoEntiere {
+  width: 100%;
+}
+.All-Agentname {
+  font-family: "quantico";
+  color: #ff4454;
+  font-size: 30px;
+}
+.All-Agentrole {
+  color: #d66871;
+  font-family: "lekton";
+  font-size: 25px;
+}
+.All-Agentdescription {
+  color: #d65863;
+  text-align: center;
+  font-family: "rationale";
+  font-size: 17px;
+}
+.profildagent {
+  display: flex;
+  flex-direction: column;
+}
+.Abilities {
+  color: #ff445491;
+  font-family: "lekton";
+}
+.deleteCrud-button {
+  background-color: #212121;
+  color: #ff4454;
+  border: 2px solid #ff4454;
+  font-family: "Quantico";
+  font-size: 20px;
+  width: 50%;
+}
+/* TABLETTE STYLE CSS */
+
+@media screen and (max-width: 768px) {
+  /*header */
+  .header {
+    padding: 10px 60px 0px 60px;
+  }
+  /*header2*/
+  .linkHeader {
+    font-size: 20px;
+  }
+
+  /*page de connexion */
+
+  .FormAuth {
+    margin: 10px 0px 0px 70px;
+    width: 37%;
+  }
+  .AcceuilPage {
+    padding-top: 30px;
+  }
+  h5 {
+    font-size: 13px;
+  }
+  .prompt {
+    font-size: 15px;
+  }
+  .ButtonAuth {
+    padding-top: 0px;
+  }
+  .messageCrud {
+    font-size: 15px;
+  }
+  .weaponImage {
+    padding: 29px 10px 10px 10px;
+  }
+  .WeaponSection {
+    padding-top: 20px;
+  }
+  .weaponpicture {
+    height: 100px;
+  }
+  .IntroWeapon {
+    font-size: 14px;
+  }
+  .card-weapon {
+    opacity: 100%;
+    width: 46%;
+  }
+  .Submit {
+    height: 30px;
+    font-size: 14px;
+  }
+  .Question {
+    font-size: 13px;
+  }
+  .linkAuth {
+    font-size: 13px;
+  }
+  .Inputform {
+    padding: 5px 0px;
+  }
+  .LogoutButton {
+    width: 50%;
+  }
+  .hidepsw {
+    width: 60%;
+  }
+  .AgentPresentation {
+    padding: 20px 10px 20px 14px;
+    width: 60%;
+  }
+  .AgentPicture {
+    width: 25%;
+    padding-top: 25px;
+  }
+  .agentprofil {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .HeadersansConnexion {
+    padding-top: 0px;
+  }
+  .allAgents {
+    margin-left: 5px;
+  }
+  .ListAgent {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .AgentName {
+    font-size: 25px;
+  }
+  .AgentRole {
+    font-size: 20px;
+  }
+  .Agentdescription {
+    font-size: 11px;
+  }
+  .abilityUlt {
+    flex-direction: column;
+  }
+  .abilityContainer {
+    width: 100%;
+  }
+  .AbilityLogo {
+    width: 30%;
+  }
+  .abilitydescription {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .abilityDescription {
+    font-size: 9px;
+  }
+  .UltiVideo {
+    width: 80%;
+  }
+  .ultcard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .VideoOfUlt {
+    width: 60%;
+  }
+  .UltiName {
+    margin-top: 4%;
+    margin-left: 25px;
+    width: 50%;
+  }
+  .Ultname {
+    font-size: 23px;
+  }
+  .VolumeIcon {
+    padding: 3px;
+  }
+  .AllCrud {
+    gap: 9px;
+    padding: 35px 20px 0px 20px;
+  }
+  .Cardcontainer {
+    gap: 25px;
+    width: 50%;
+  }
+  .Card-crud {
+    opacity: 100%;
+  }
+  .CrudLink {
+    width: 75%;
+    padding-left: 20px;
+  }
+  .linkCrud {
+    font-size: 12px;
+  }
+  .picture-of-crud {
+    width: 70%;
+    border-radius: 6px;
+  }
+  .Allweapons2 {
+    gap: 50px;
+  }
+  .TableauGrand {
+    width: 90%;
+  }
+  .ImageCruduser2 {
+    display: none;
+  }
+  .CreateObject {
+    padding: 30px 30px 30px 30px;
+  }
+  .AncreForm {
+    gap: 130px;
+  }
+  .DivAncre {
+    opacity: 100%;
+  }
+  .CreateCard {
+    flex-direction: column;
+    opacity: 100%;
+  }
+  .Object {
+    width: 100%;
+  }
+  .ObjectForm {
+    width: 96%;
+  }
+  .divupd {
+    padding: 50px 40px 60px 40px;
+    flex-direction: column-reverse;
+  }
+  .UpdateForm {
+    width: 96%;
+  }
+  .imgButt {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  .ImgUpdate {
+    width: 40%;
+    box-shadow: 0 0 15px 7px rgba(254, 62, 62, 0.658);
+  }
+  .linkothercrud {
+    margin-top: 0px;
+    gap: 10px;
+    margin-left: 50px;
+  }
+  .linkCrud2 {
+    font-size: 20px;
+  }
+  .AllAbility {
+    display: flex;
+    flex-direction: Row;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 2px solid #ff445466;
+    margin: 40px 40px 40px 40px;
+    padding: 35px 30px 35px 30px;
+  }
+  .AbilityCard {
+    width: 23%;
+    opacity: 100%;
+  }
+  .AbilityInfo{
+    height: 240px;
+  }
+  .AbilityName{
+    font-size: 15px;
+    text-align: center;
+  }
+  .AbilityType{
+    font-size: 10px;
+  }
+  .AbilityDescription{
+    font-size: 13px;
+  }
+}
+
+/* MOBILE STYLE CSS */
+
+@media screen and (max-width: 480px) {
+  .AcceuilPage {
+    background-image: url("../src/assets/images/background/bckmobile.png");
+  }
+  .header {
+    padding: 8px 10px 0px 10px;
+    gap: 45px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .HeadersansConnexion {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 0px 0px 0px;
+  }
+  .FormAuth {
+    margin: 80px 30px 0px 30px;
+  }
+  .FormAuth {
+    margin: 50px 30px 0px 30px;
+    width: 73%;
+  }
+  .LogoutButton {
+    width: 90%;
+  }
+  .headerPart {
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .linkHeader {
+    font-size: 30px;
+  }
+  .AuthSection {
+    background-image: url("../src/assets/images/background/Jettwpmb.png");
+  }
+  .Question {
+    font-size: 16px;
+  }
+  .linkAuth {
+    font-size: 16px;
+  }
+  .WeaponSection {
+    padding: 30px 20px 30px 20px;
+    gap: 10px;
+  }
+  .Titlediv {
+    padding: 20px 15px 20px 15px;
+  }
+  .card-weapon {
+    width: 100%;
+  }
+  .suppWeapon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+  .card-weaponCrud{
+    flex-direction: column;
+  }
+  .IntroWeapon {
+    font-size: 12px;
+  }
+  .weaponTitle {
+    font-size: 30px;
+  }
+  .weaponCost {
+    font-size: 13px;
+  }
+  .weaponDescription {
+    font-size: 11px;
+  }
+  .Allweapons {
+    gap: 25px;
+  }
+  .Agent-profil {
+    flex-direction: column-reverse;
+  }
+  .allAgents {
+    display: grid;
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+  .ListAgent {
+    padding: 5px;
+  }
+  .agentprofil {
+    width: 60%;
+  }
+  .AgentPicture {
+    width: 100%;
+  }
+  .AgentPresentation {
+    width: 95%;
+  }
+  .Agentdescription {
+    font-size: 14px;
+  }
+  .abilityContainer {
+    width: 95%;
+  }
+  .abilityCard {
+    width: 47%;
+  }
+  .AbilityLogo {
+    width: 45%;
+  }
+  .abilityName {
+    font-size: 13px;
+  }
+  .abilityDescription {
+    font-size: 11px;
+  }
+  .ultcard {
+    flex-direction: column;
+  }
+  .UltiName {
+    margin-left: none;
+    width: 80%;
+  }
+  .UltiVideo {
+    width: 90%;
+    margin-top: 15px;
+  }
+  .AllCrud {
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 60px;
+  }
+  .Cardcontainer {
+    gap: 50px;
+    width: 100%;
+  }
+  .Card-crud {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .CrudLink {
+    width: 80%;
+    padding: 15px 0px 15px 30px;
+  }
+  .linkCrud {
+    font-size: 15px;
+  }
+  .ImageCrud {
+    justify-content: start;
+  }
+  .picture-of-crud {
+    width: 100%;
+    border-radius: 3px;
+    opacity: 80%;
+  }
+  .card-weaponCrud {
+    width: 100%;
+  }
+  .TableauGrand {
+    margin: 30px 10px 30px 10px;
+    gap: 12px;
+  }
+  .case1 {
+    gap: 20%;
+  }
+  .case2 {
+    gap: 32%;
+  }
+  .Userinfo {
+    font-size: 10px;
+  }
+
+  .CreateObject {
+    padding: 50px 10px 50px 10px;
+  }
+  .AncreForm {
+    gap: 40px;
+  }
+  .DivAncre {
+    width: 23%;
+    border: 1px SOLID #ff4454ca;
+    opacity: 100%;
+  }
+  .Ancre {
+    font-size: medium;
+  }
+  .CreateCard {
+    flex-direction: column;
+    gap: 0px;
+    border: 2px double #ff4454ca;
+    opacity: 100%;
+  }
+  .Object {
+    width: 100%;
+  }
+  .TitleForm {
+    font-size: 30px;
+  }
+  .ObjectForm {
+    width: 93%;
+    padding: 25px 20px 25px 20px;
+  }
+  .Submit2 {
+    width: 35%;
+  }
+  .linkCrud2 {
+    font-size: 20px;
+  }
+  .linkothercrud {
+    margin-left: 20px;
+  }
+  .imgButt {
+    flex-direction: column;
+    width: 96%;
+    gap: 20px;
+  }
+  .ImgUpdate {
+    width: 90%;
+  }
+  .divupd {
+    padding: 50px 20px 60px 20px;
+  }
+  .UpdateForm {
+    width: 89%;
+  }
+  .upWetitle {
+    font-size: 30px;
+  }
+  .AllAbility {
+    gap: 15px;
+    margin: 25px 10px 40px 10px;
+    padding: 15px 8px 35px 8px;
+}
+.AbilityCard {
+  width: 46%;
+}
+}
